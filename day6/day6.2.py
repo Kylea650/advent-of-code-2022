@@ -6,7 +6,7 @@ def parse_file(file: str) -> str:
     return input
 
 
-def get_marker(datastream: str) -> int:
+def get_marker(datastream: str, window_size: int) -> int:
     """
     Iterates though datastream in groups of 4 with two pointers.
     Checks if the current substring is unique with each iteration.
@@ -17,22 +17,19 @@ def get_marker(datastream: str) -> int:
     def check_unique(substring: str) -> bool:
         return len(set(list(substring))) == len(list(substring))
 
-    l, r = 0, 14
+    for i in range(len(datastream) - window_size):
+        r = i + window_size
 
-    for i in range(len(datastream) - 4):
-
-        if check_unique(datastream[l:r]):
+        if check_unique(datastream[i:r]):
             return r
-        else:
-            l += 1
-            r += 1
+
     return -1
 
 
 def main() -> int:
     file = "day6.txt"
     datastream = parse_file(file)
-    char = get_marker(datastream)
+    char = get_marker(datastream, 14)
     return char
 
 
