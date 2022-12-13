@@ -65,7 +65,7 @@ def can_be_seen(matrix: list[list[int]], row: int, col: int) -> bool:
     return can_be_seen
 
 
-def main():
+def main() -> int:
     """
     Iterates through the 2D array and checks if a given tree can be seen.
     If True (the tree can be seen), the count is increased by 1.
@@ -74,7 +74,6 @@ def main():
     """
     file = "day8.txt"
     tree_matrix = parse_input(file)
-    bool_matrix = tree_matrix
 
     count = 0
 
