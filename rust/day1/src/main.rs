@@ -13,10 +13,10 @@ fn main() {
     let mut calories = parse_input(input);
     calories.sort();
 
-    let day1 = calories[calories.len() - 1];
-    let day2 = calories[calories.len() - 3..calories.len()]
+    let part_1 = calories[calories.len() - 1];
+    let part_2 = calories[calories.len() - 3..calories.len()]
         .iter()
         .sum::<u32>();
 
-    println!("Day 1: {}\nDay 2: {}", day1, day2);
+    println!("Part 1: {}\nPart 2: {}", part_1, part_2);
 }
