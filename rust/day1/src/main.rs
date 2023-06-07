@@ -8,7 +8,7 @@ fn parse_input(input: String) -> Vec<u32> {
 }
 
 fn main() {
-    let input = std::fs::read_to_string("../day1.txt").unwrap();
+    let input = std::fs::read_to_string("day1.txt").unwrap();
 
     let mut calories = parse_input(input);
     calories.sort();
