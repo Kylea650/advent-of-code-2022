@@ -37,24 +37,4 @@ fn main() {
     let part_two = find_marker(&windows_part_two, 14);
 
     println!("Part 1: {}\nPart 2: {}", part_one, part_two);
-
-    // for (i, set) in windows_part_one.iter().enumerate() {
-    //     match set.len() {
-    //         4 => {
-    //             println!("Part 1: {}", i + 4);
-    //             break;
-    //         }
-    //         _ => continue,
-    //     }
-    // }
-
-    // for (i, set) in windows_part_two.iter().enumerate() {
-    //     match set.len() {
-    //         14 => {
-    //             println!("Part 2: {}", i + 14);
-    //             break;
-    //         }
-    //         _ => continue,
-    //     }
-    // }
 }
